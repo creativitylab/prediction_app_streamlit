@@ -1,0 +1,2 @@
+-to install from env file:
+conda env update --file environment.yml --prune

@@ -1,0 +1,4 @@
+to run everyday:
+one pagination.py->should create 1 csv files: raw
+two clean data.py->should create 1 csv files: clean data
+should run from models folder: fb_create_models.py and lstm_create_models.py
