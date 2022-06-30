@@ -46,6 +46,7 @@ def get_pagination_data():
 df=get_clean_data()
 clean_df_fb = get_clean_data_fb()
 
+# todo uncomment these
 # @st.cache(ttl=60 * 60 * 25)
 def run_fb_model(df):
     # df = pd.read_csv(os.path.join('process', 'df_imputed_120422.csv'), infer_datetime_format=True)
@@ -59,8 +60,8 @@ def run_fb_model(df):
     create_models(df, 'pm1')
     create_models(df, 'pm10')
 
-
-@st.cache(ttl=60 * 60 * 25)
+# todo uncomment these
+# @st.cache(ttl=60 * 60 * 25)
 def run_lstm_model(df):
     # df = pd.read_csv(os.path.join('process', 'df_imputed_120422.csv'), infer_datetime_format=True)
 
@@ -75,8 +76,8 @@ def run_lstm_model(df):
 
 # todo uncomment these
 
-run_model_fb = run_fb_model(clean_df_fb)
-run_model_lstm = run_lstm_model(df)
+# run_model_fb = run_fb_model(clean_df_fb)
+# run_model_lstm = run_lstm_model(df)
 
 
 def app():
