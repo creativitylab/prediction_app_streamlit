@@ -24,6 +24,7 @@ def get_raw_data():
     This function return a pandas DataFrame with the raw data.
     """
     raw_df = pd.read_csv(os.path.join('process', 'last_step_pagination_110422.csv'))
+    raw_df = raw_df[raw_df['pm25'] < 200]
     return raw_df
 
 
@@ -33,7 +34,7 @@ def get_clean_data():
     This function returns a pandas DataFrame with the clean data.
     """
     clean_df = pd.read_csv(os.path.join('process', 'last_step_pagination_110422.csv'), infer_datetime_format=True)
-
+    clean_df = clean_df[clean_df['pm25'] < 200]
     clean_df['TimeStamp'] = pd.to_datetime(clean_df['TimeStamp'], format="%Y-%m-%d %H:%M:%S")
 
     # remove data before 2021
@@ -57,6 +58,7 @@ def get_clean_data_fb():
     This function return a pandas DataFrame with the clean data.
     """
     clean_df = pd.read_csv(os.path.join('process', 'last_step_pagination_110422.csv'), infer_datetime_format=True)
+    clean_df = clean_df[clean_df['pm25'] < 200]
 
     clean_df['TimeStamp'] = pd.to_datetime(clean_df['TimeStamp'], format="%Y-%m-%d %H:%M:%S")
 

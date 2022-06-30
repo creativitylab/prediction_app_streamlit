@@ -46,7 +46,7 @@ def get_pagination_data():
 df=get_clean_data()
 clean_df_fb = get_clean_data_fb()
 
-@st.cache(ttl=60 * 60 * 25)
+# @st.cache(ttl=60 * 60 * 25)
 def run_fb_model(df):
     # df = pd.read_csv(os.path.join('process', 'df_imputed_120422.csv'), infer_datetime_format=True)
 

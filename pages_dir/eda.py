@@ -24,7 +24,7 @@ def app():
         with st.expander('View entire dataset'):
             st.dataframe(df)
 
-        all_menu_items = ['Empty Values', 'Descriptive Analysis',
+        all_menu_items = ['Empty Values',
                           'Distribution of Numerical Columns',
                           'Box Plots']
 
@@ -49,9 +49,9 @@ def app():
 
                 st.pyplot(plt)
 
-        if 'Detailed Analysis' in all_menu_items:
-            st.subheader('Detailed Analysis:')
-            st.dataframe(df.describe())
+        # if 'Detailed Analysis' in all_menu_items:
+        #     st.subheader('Detailed Analysis:')
+        #     st.dataframe(df.describe())
 
         if 'Histogram' in all_menu_items:
             st.subheader("Select column to plot histogram for:")
